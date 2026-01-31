@@ -8,7 +8,7 @@ public class BaseNPC : MonoBehaviour, IInteractable
     public GameObject canvasDialogo;
     public TMP_Text componenteTexto;
 
-    private bool _yaSeUso = false;
+    //private bool _yaSeUso = false;
 
     void Start()
     {
@@ -42,6 +42,6 @@ public class BaseNPC : MonoBehaviour, IInteractable
     {
         Debug.Log("¡NPC fuera de rango");
         canvasDialogo.SetActive(false);
-        _yaSeUso = true;
+        //_yaSeUso = true;
     }
 }
