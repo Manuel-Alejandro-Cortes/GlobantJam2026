@@ -40,8 +40,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         //rb.MovePosition(rb.position + movement.normalized * movementSpeed * Time.fixedDeltaTime);
-        rb.linearVelocity = new Vector2(movement.x * movementSpeed, movement.y * movementSpeed);
+        //rb.linearVelocity = new Vector2(movement.x * movementSpeed, movement.y * movementSpeed);
+        rb.linearVelocity = new Vector2(movement.normalized.x * movementSpeed, movement.normalized.y * movementSpeed);
     }
-
-
 }
