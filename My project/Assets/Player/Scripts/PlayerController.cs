@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -31,10 +31,17 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        //animator.SetFloat("Horizontal", movement.x);
-        //animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
         //animator.SetFloat("Speed", movement.sqrMagnitude);
-
+        if (movement.x > 0)
+        {
+            transform.localScale = new Vector2(-1f, 1f);
+        }
+        else if (movement.x < 0)
+        {
+            transform.localScale = new Vector2(1f, 1f);
+        }
     }
 
     void FixedUpdate()

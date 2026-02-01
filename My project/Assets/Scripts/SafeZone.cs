@@ -41,7 +41,7 @@ public class SafeZone : MonoBehaviour
 
             // Si sale, iniciamos la espera de 2 segundos
             // Guardamos la corrutina en la variable para poder cancelarla si vuelve a entrar
-            _resetCoroutine = StartCoroutine(WaitAndEnableFollow());
+            if(this.isActiveAndEnabled) _resetCoroutine = StartCoroutine(WaitAndEnableFollow());
         }
     }
 
