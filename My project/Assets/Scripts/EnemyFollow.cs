@@ -1,13 +1,21 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class EnemyFollow : MonoBehaviour
 {
+
+    // Lista global para que la SafeZone encuentre a todos los enemigos rápido
+    public static List<EnemyFollow> AllEnemies = new List<EnemyFollow>();
+
     public float moveSpeed = 2f;
     Rigidbody2D rb;
     public Transform target;
     Vector2 moveDirection;
-    bool FollowPlayer;
+    public bool CanFollowPlayer;
+
+    void OnEnable() { AllEnemies.Add(this); }
+    void OnDisable() { AllEnemies.Remove(this); }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,9 +40,14 @@ public class EnemyFollow : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (target)
+        if (target && CanFollowPlayer)
         {
-            rb.linearVelocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
+            rb.linearVelocity = new Vector2(moveDirection.x, moveDirection.y) * (moveSpeed);
+        }
+        else
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = 0f;
         }
     }
 }
