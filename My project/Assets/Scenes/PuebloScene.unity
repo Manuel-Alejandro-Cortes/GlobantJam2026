@@ -21286,7 +21286,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1951620610841341408, guid: 1eb89feb8bb6ae64b9720391273ac2d7, type: 3}
       propertyPath: moveSpeed
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1951620610841341408, guid: 1eb89feb8bb6ae64b9720391273ac2d7, type: 3}
       propertyPath: valorActual
@@ -27431,11 +27431,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1951620610841341408, guid: 1eb89feb8bb6ae64b9720391273ac2d7, type: 3}
       propertyPath: moveSpeed
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1951620610841341408, guid: 1eb89feb8bb6ae64b9720391273ac2d7, type: 3}
       propertyPath: valorActual
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951620610841341408, guid: 1eb89feb8bb6ae64b9720391273ac2d7, type: 3}
+      propertyPath: CanFollowPlayer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2785727551095021399, guid: 1eb89feb8bb6ae64b9720391273ac2d7, type: 3}
       propertyPath: m_BodyType
