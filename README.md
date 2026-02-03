@@ -8,3 +8,6 @@ You must find all the pieces before time runs out or before being captured by th
 The game is controlled using the arrow keys, and blends exploration, tension, and survival, confronting the player with an uncomfortable question:
 
 How much of who we are must we change in order to belong?
+
+
+https://itch.io/jam/global-game-jam-colombia2026/rate/4252688
